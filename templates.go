@@ -182,7 +182,7 @@ type TemplatedEmail struct {
 	// TemplateModel: The model to be applied to the specified template to generate HtmlBody, TextBody, and Subject.
 	TemplateModel map[string]interface{} `json:",omitempty"`
 	// InlineCss: By default, if the specified template contains an HTMLBody, we will apply the style blocks as inline attributes to the rendered HTML content. You may opt-out of this behavior by passing false for this request field.
-	InlineCss bool `json:",omitempty"`
+	InlineCss bool `json:","`
 	// From: The sender email address. Must have a registered and confirmed Sender Signature.
 	From string `json:",omitempty"`
 	// To: REQUIRED Recipient email address. Multiple addresses are comma separated. Max 50.
@@ -198,7 +198,7 @@ type TemplatedEmail struct {
 	// Headers: List of custom headers to include.
 	Headers []Header `json:",omitempty"`
 	// TrackOpens: Activate open tracking for this email.
-	TrackOpens bool `json:",omitempty"`
+	TrackOpens bool `json:","`
 	// Attachments: List of attachments
 	Attachments []Attachment `json:",omitempty"`
 }
